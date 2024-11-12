@@ -1,8 +1,4 @@
-<p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Customers" %>
-
-<h1>Customers</h1>
+<h1>Alphabetized Customers<h1>
 
 <div id="customers">
   <% @customers.each do |customer| %>
@@ -13,5 +9,5 @@
   <% end %>
 </div>
 
-<%= link_to "Alphabetized Customers", alphabetized_customers_path %> |
+<%= link_to "Customers", customers_path %> |
 <%= link_to "Customers Without Emails", missing_email_customers_path %>

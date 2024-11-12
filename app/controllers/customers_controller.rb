@@ -6,6 +6,14 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
+  def alphabetized
+    @customers = Customer.order(:full_name)
+  end
+
+  def missing_email
+    @customers = Customer.where(email: [ nil, "" ])
+  end
+
   # GET /customers/1 or /customers/1.json
   def show
   end
