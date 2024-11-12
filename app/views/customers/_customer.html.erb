@@ -1,22 +1,7 @@
-<div id="<%= dom_id customer %>">
-  <p>
-    <strong>Full name:</strong>
-    <%= customer.full_name %>
-  </p>
-
-  <p>
-    <strong>Phone number:</strong>
-    <%= customer.phone_number %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= customer.email %>
-  </p>
-
-  <p>
-    <strong>Notes:</strong>
-    <%= customer.notes %>
-  </p>
-
+<div class="customer">
+<%= image_tag customer.image if customer.image.attached? %>
+<p><strong>Name: </strong><%= customer.full_name %></p>
+<p><strong>Number: </strong><%= customer.phone_number %></p>
+<p><strong>Email: </strong><%= customer.email %></p>
+<p><strong>Notes: </strong><%= customer.notes %></p>
 </div>
